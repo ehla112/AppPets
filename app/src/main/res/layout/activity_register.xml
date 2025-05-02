@@ -123,5 +123,6 @@
         android:layout_width="391dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:backgroundTint="@color/bottoncolor"
         android:text="@string/btnSaveUser" />
 </LinearLayout>
