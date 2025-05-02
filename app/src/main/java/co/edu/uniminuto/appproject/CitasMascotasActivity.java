@@ -247,8 +247,8 @@ public class CitasMascotasActivity extends AppCompatActivity {
     protected void onResume() {
         super.onResume();
         listData(findViewById(R.id.main));
-        String nombreMascota = getIntent().getStringExtra("nombreMascota");
-        tvCitas.setText("No olvides  las citas de "+ nombreMascota);
+
+
 
 
     }
@@ -259,7 +259,12 @@ public class CitasMascotasActivity extends AppCompatActivity {
         this.btnAgendar = findViewById(R.id.btnAgendar);
         this.btnProximas = findViewById(R.id.btnProximas);
         this.btnCitasPasadas = findViewById(R.id.btnCitasPasadas);
+        this.tvCitas = findViewById(R.id.tvCitas);
         listData(findViewById(R.id.main));
+        String nombreMascota = getIntent().getStringExtra("nombreMascota");
+        if(nombreMascota != null && tvCitas !=null){
+            tvCitas.setText("No olvides  las citas de "+ nombreMascota);
+        }
 
 
     }

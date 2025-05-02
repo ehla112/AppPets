@@ -70,6 +70,7 @@ public class CitasActivity extends AppCompatActivity {
     private void setOnItemClick(AdapterView<?> parent, View view, int position, long id) {
         Mascotas selected = (Mascotas) parent.getItemAtPosition(position);
         idMascota = selected.getIdMascota();
+        nombreMascota = selected.getNombreMascota();
         Intent intent = new Intent(this, CitasMascotasActivity.class);
         intent.putExtra("idMascota", idMascota);
         intent.putExtra("nombreMascota", nombreMascota);
