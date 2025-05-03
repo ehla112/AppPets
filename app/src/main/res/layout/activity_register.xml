@@ -10,7 +10,7 @@
     tools:context=".RegisterActivity">
 
 
-<TextView
+    <TextView
         android:id="@+id/tvRegisterTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
         android:hint="@string/etUser"
         android:inputType="text"
         android:padding="12dp"
-      />
+        />
 
     <EditText
         android:id="@+id/etName"
@@ -43,7 +43,7 @@
         android:hint="@string/etPassword"
         android:inputType="textPassword"
         android:padding="12dp"
-     />
+        />
 
     <EditText
         android:id="@+id/etEmail"
@@ -61,7 +61,7 @@
         android:hint="@string/etPhone"
         android:inputType="phone"
         android:padding="12dp"
-      />
+        />
 
     <EditText
         android:id="@+id/etAddress"
@@ -70,7 +70,7 @@
         android:hint="@string/etAddress"
         android:inputType="textPostalAddress"
         android:padding="12dp"
-         />
+        />
     <TextView
         android:id="@+id/tvDatosMas"
         android:layout_width="wrap_content"
@@ -78,7 +78,7 @@
         android:layout_marginTop="8dp"
         android:text="@string/etDatosMascota"
         android:textStyle="bold"
-         />
+        />
 
     <EditText
         android:id="@+id/etNombreMascota"
@@ -93,7 +93,7 @@
         android:layout_height="48dp"
         android:layout_marginTop="4dp"
         android:hint="@string/etTipoMascota"
-         />
+        />
 
     <EditText
         android:id="@+id/etEdad"
@@ -115,7 +115,7 @@
         android:layout_height="48dp"
         android:hint="@string/etPeso"
         android:inputType="numberDecimal"
-       />
+        />
 
 
     <Button
@@ -123,5 +123,6 @@
         android:layout_width="391dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:backgroundTint="@color/bottoncolor"
         android:text="@string/btnSaveUser" />
 </LinearLayout>

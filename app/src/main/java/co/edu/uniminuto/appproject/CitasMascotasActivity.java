@@ -85,7 +85,7 @@ public class CitasMascotasActivity extends AppCompatActivity {
 
     }
     private void popUp(ArrayList<Citas> citas){
-        StringBuilder sb = new StringBuilder();
+        StringBuilder sb = new StringBuilder();  // se crea un String builder que permite construir un texto, este se morstarar en un popup
         for (Citas cita : citas) {
             sb.append("Mascota: ").append(cita.getNombreMascota()).append("\n")
                     .append("Fecha: ").append(cita.getFecha()).append("\n")

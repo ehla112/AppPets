@@ -17,6 +17,7 @@ public class ActivityHome extends AppCompatActivity {
     private Button btnInfoMascota;
     private Button btnCitasMedicas;
     private Button btnVacunas;
+    private Button btnMedicamentos;
     private Button btnCerrarSesion;
     private int idDueno;
     private int idMascota;
@@ -39,8 +40,25 @@ public class ActivityHome extends AppCompatActivity {
         btnInfoHumano.setOnClickListener(this::startInfoUser);
         btnCitasMedicas.setOnClickListener(this::startInfoCitasMedicas);
         btnVacunas.setOnClickListener(this::startVacunas);
+        btnCerrarSesion.setOnClickListener(this::CerrarSesion);
+        btnMedicamentos.setOnClickListener(this::startMedicamentos);
 
     }
+
+    private void CerrarSesion(View view) {
+            Toast.makeText(this, "Cerrando sesión...", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, MainActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            startActivity(intent);
+            finish();
+
+    }
+
+    private void startMedicamentos(View view) {
+        Intent intent = new Intent(this, BuscarMedicamentoActivity.class);
+        startActivity(intent);
+    }
+
 
     private void startInfoMascota(View view) {
         Intent intent = new Intent(this, dataPetsActivity.class);
@@ -82,6 +100,8 @@ public class ActivityHome extends AppCompatActivity {
         btnInfoMascota = findViewById(R.id.btnInfoMascota);
         btnCitasMedicas = findViewById(R.id.btnCitasMedicas);
         btnVacunas = findViewById(R.id.btnVacunas);
+        btnCerrarSesion = findViewById(R.id.btnCerrarSesion);
+        btnMedicamentos = findViewById(R.id.btnMedicamentos);
         idDueno = getIntent().getIntExtra("idDueno", -1);
         if (idDueno == -1) {
             Toast.makeText(this, "No se pudo obtener el ID del dueño", Toast.LENGTH_SHORT).show();

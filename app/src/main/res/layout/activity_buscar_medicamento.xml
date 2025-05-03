@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    tools:context=".BuscarMedicamentoActivity"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvMedicamentos"
+        android:layout_width="382dp"
+        android:layout_height="46dp"
+        android:text="TextView" />
+
+    <EditText
+        android:id="@+id/etMedicamento"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Nombre del medicamento" />
+
+    <Button
+        android:id="@+id/btnBuscarMedi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar" />
+
+    <TextView
+        android:id="@+id/tvResultado"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="16dp"
+        android:text="" />
+</LinearLayout>

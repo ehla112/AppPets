@@ -77,6 +77,7 @@
     <string name="etDiasRecientes">Dias Recientes</string>
     <string name="tvListVmascota">Elija la mascota para infor vacunas</string>
     <string name="btnCitasPasadas">Citas Pasadas</string>
+    <string name="btnMedicamentos">medicamentos</string>
 
 
 </resources>

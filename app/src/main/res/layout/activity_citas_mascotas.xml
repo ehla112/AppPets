@@ -5,13 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="24dp"
     tools:context=".CitasMascotasActivity">
 
     <TextView
         android:id="@+id/tvCitas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="4dp"
         android:text="@string/tvCitas"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -21,48 +22,47 @@
 
     <ListView
         android:id="@+id/lvCitasMas"
-        android:layout_width="335dp"
-        android:layout_height="346dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="313dp"
+        android:layout_height="491dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/btnAgendar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.218" />
-
+        app:layout_constraintTop_toBottomOf="@id/tvCitas"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/btnAgendar"
-        android:layout_width="179dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="468dp"
+        android:layout_width="200dp"
+        android:layout_height="48dp"
         android:text="@string/btnAgendar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.068"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:backgroundTint="@color/bottoncolor"
+        android:layout_marginBottom="24dp" />
 
     <Button
         android:id="@+id/btnProximas"
-        android:layout_width="174dp"
-        android:layout_height="56dp"
-        android:layout_marginEnd="16dp"
-        android:text="Próximas Citas"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.693" />
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@id/btnCitasPasadas"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btnAgendar"
+        android:backgroundTint="@color/bottoncolor"
+        android:text="Próximas Citas" />
 
     <Button
         android:id="@+id/btnCitasPasadas"
-        android:layout_width="187dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="92dp"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintStart_toEndOf="@id/btnProximas"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.82" />
-
+        app:layout_constraintBottom_toTopOf="@id/btnAgendar"
+        android:backgroundTint="@color/bottoncolor"
+        android:text="Citas Pasadas" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

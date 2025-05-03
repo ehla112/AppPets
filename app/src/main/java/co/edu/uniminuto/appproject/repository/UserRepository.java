@@ -25,30 +25,30 @@ public class UserRepository {
         this.context = context;
         this.dataBase = new ManagerDataBase(context);
     }
-    public User login(String user, String password){
-            SQLiteDatabase sqLiteDatabase = dataBase.getReadableDatabase();
-            String sql = "SELECT * FROM users WHERE use_user = ? AND use_password = ?";
-            Cursor cursor = sqLiteDatabase.rawQuery(sql, new String[]{user, password});
-            if(cursor.moveToFirst()){
-                User us = new User();
-                us.setId(cursor.getInt(0));
-                us.setUser(cursor.getString(1));
-                us.setName(cursor.getString(2));
-                us.setPassword(cursor.getString(3));
-                us.setEmail(cursor.getString(4));
-                us.setPhone(cursor.getString(5));
-                us.setAddress(cursor.getString(6));
-                us.setStatus(cursor.getInt(7) == 1);
-                cursor.close();
-                return us;
-            }else{
-                return null;
-            }
+        public User login(String user, String password){
+                SQLiteDatabase sqLiteDatabase = dataBase.getReadableDatabase();
+                String sql = "SELECT * FROM users WHERE use_user = ? AND use_password = ?";
+                Cursor cursor = sqLiteDatabase.rawQuery(sql, new String[]{user, password});
+                if(cursor.moveToFirst()){
+                    User us = new User();
+                    us.setId(cursor.getInt(0));
+                    us.setUser(cursor.getString(1));
+                    us.setName(cursor.getString(2));
+                    us.setPassword(cursor.getString(3));
+                    us.setEmail(cursor.getString(4));
+                    us.setPhone(cursor.getString(5));
+                    us.setAddress(cursor.getString(6));
+                    us.setStatus(cursor.getInt(7) == 1);
+                    cursor.close();
+                    return us;
+                }else{
+                    return null;
+                }
 
 
 
 
-    }
+        }
     public long insertUser(User user){
         long newID=-1;
         try {
